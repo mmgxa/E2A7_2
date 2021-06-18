@@ -115,3 +115,60 @@ The Accuracy metric cannot be used. Instead, perplexity - which is the exponent 
 #### Loss/Perplexity vs Epochs
 ![Alt text](logs2.png)
 
+
+
+# Part 3 - English-German Translation (using Multi30k)
+I wanted to translate from English to TUrkish. Unfortunately, spacy doesn't support Turkish, so I had to go with German. :) 
+
+## Loading Data
+
+Since the Multi30k dataset is part of the legacy code (and might be deprecated), I downloaded the original files from github using wget
+
+
+## Parsing Files
+The `pd.read_csv` method was used (with ` sep="\t"`) to read the files. 
+
+
+## Metric
+The Accuracy metric cannot be used. Instead, perplexity - which is the exponent of the loss value - is recorded.
+
+## Model
+The same model that was presented in the class has been used to train and evaluate (including teacher-forcing for the former)
+
+## Results
+
+
+
+#### Training Log
+|    epoch    |   Train PPL |  Train Loss |   Valid PPL |  Valid Loss |
+| ----------- | ----------- | ----------- | ----------- | ----------- | 
+|           1  |      20.194  |      3.0054  |      17.243  |      2.8474  |
+ |           2  |      12.579  |       2.532  |      14.515  |      2.6752  |
+ |           3  |      10.336  |      2.3356  |      13.238  |      2.5831  |
+ |           4  |      8.6194  |       2.154  |      12.732  |      2.5441  |
+ |           5  |      7.5958  |      2.0276  |      11.899  |      2.4765  |
+ |           6  |      6.6891  |      1.9005  |      11.787  |       2.467  |
+ |           7  |      6.0315  |       1.797  |      11.185  |      2.4146  |
+ |           8  |      5.4878  |      1.7025  |      11.416  |       2.435  |
+ |           9  |      5.0367  |      1.6167  |      11.442  |      2.4373  |
+ |          10  |      4.6311  |      1.5328  |      11.426  |      2.4359  |
+ |          11  |      4.3749  |      1.4759  |      11.332  |      2.4276  |
+ |          12  |      4.0922  |      1.4091  |      11.794  |      2.4676  |
+ |          13  |       3.869  |       1.353  |       12.21  |      2.5022  |
+ |          14  |      3.6742  |      1.3013  |      12.088  |      2.4922  |
+ |          15  |      3.5334  |      1.2623  |      12.359  |      2.5143  |
+ |          16  |      3.3694  |      1.2147  |      12.429  |      2.5201  |
+ |          17  |      3.2581  |      1.1812  |      12.436  |      2.5206  |
+ |          18  |      3.1669  |      1.1528  |      12.548  |      2.5295  |
+ |          19  |      3.0316  |      1.1091  |      13.289  |      2.5869  |
+ |          20  |      2.9951  |       1.097  |       13.33  |      2.5901  |
+
+
+
+
+
+#### Loss/Perplexity vs Epochs
+![Alt text](logs3.png)
+
+#### Samples
+![Alt text](samples3.png)
