@@ -174,7 +174,7 @@ The same model that was presented in the class has been used to train and evalua
 ![Alt text](samples3.png)
 
 
-# Part 4- Chatbot Design (using Multi30k)
+# Part 4- Chatbot Design (using Movie Dialogs)
 I wanted to design a chatbot. The official pytorch tutorial suggested using the [Cornell Movie--Dialogs Corpus](https://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html)  
 
 ## Loading Data
