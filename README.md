@@ -172,3 +172,27 @@ The same model that was presented in the class has been used to train and evalua
 
 #### Samples
 ![Alt text](samples3.png)
+
+
+# Part 4- Chatbot Design (using Multi30k)
+I wanted to design a chatbot. The official pytorch tutorial suggested using the [Cornell Movie--Dialogs Corpus](https://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html)  
+
+## Loading Data
+
+Data files were downloaded from http://www.cs.cornell.edu/~cristian/data/cornell_movie_dialogs_corpus.zip. One of the files had the dialogs along with their ids. ANother file mapped ids to a sequence indicating pair(s) of dialog. 
+
+## Metric
+The Accuracy metric cannot be used. Instead, perplexity - which is the exponent of the loss value - is recorded.
+
+## Model
+The same model that was presented in the class has been used to train and evaluate (including teacher-forcing for the former)
+
+
+## Training Log
+![Alt text](logs4.png)
+
+## Samples
+![Alt text](samples4.png)
+
+## Discussion
+For the chatbot, the results were not good! Infact, we need a much better model!
