@@ -122,7 +122,7 @@ I wanted to translate from English to TUrkish. Unfortunately, spacy doesn't supp
 
 ## Loading Data
 
-Since the Multi30k dataset is part of the legacy code (and might be deprecated), I downloaded the original files from github using wget
+I downloaded the original files from github using wget. This could also have been done using the Multi30k dataset, but I chose the former.
 
 
 ## Parsing Files
